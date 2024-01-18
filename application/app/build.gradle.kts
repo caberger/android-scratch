@@ -69,9 +69,14 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    // out changes
+    // our hilt
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
+
+    // RxJava
+    implementation("io.reactivex.rxjava3:rxjava:3.1.8")
+    implementation("androidx.compose.runtime:runtime-rxjava3:1.5.2")
+
 }
 kapt {
     correctErrorTypes = true
