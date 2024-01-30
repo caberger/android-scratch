@@ -77,6 +77,8 @@ dependencies {
     implementation("io.reactivex.rxjava3:rxjava:3.1.8")
     implementation("androidx.compose.runtime:runtime-rxjava3:1.5.2")
 
+    // Json Serialization
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.16.1")
 }
 kapt {
     correctErrorTypes = true

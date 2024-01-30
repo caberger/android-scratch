@@ -27,8 +27,9 @@ public class MainActivity extends ComponentActivity {
         super.onCreate(savedInstanceState);
         mainView.setContentView(this);
 
-        var nextModel = new Model();
-        nextModel.greeting = "Änderung";
-        store.subject.onNext(nextModel);
+        store.next(model -> model.greeting = "mit consumer");
+        var s2 = store.subject
+                .map(model -> model.greeting.toUpperCase())
+                .subscribe(text -> Log.i(TAG, text));
     }
 }
