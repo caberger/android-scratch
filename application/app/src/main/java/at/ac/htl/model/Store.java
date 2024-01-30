@@ -9,9 +9,10 @@ import io.reactivex.rxjava3.subjects.BehaviorSubject;
 public class Store {
     @Inject
     Store() {
-        store = BehaviorSubject.createDefault(new Model("Hallo"));
+        subject = BehaviorSubject.createDefault(new Model());
     }
-    public BehaviorSubject<Model> store;
-    public String greeting = "Hello world";
+
+    public BehaviorSubject<Model> subject;
+
 }
 

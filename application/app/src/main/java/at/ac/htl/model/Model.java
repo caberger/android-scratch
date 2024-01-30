@@ -1,6 +1,5 @@
 package at.ac.htl.model;
 
-public record Model (
-        String greeting
-) {
+public class Model {
+    public String greeting = "am Anfang";
 }
